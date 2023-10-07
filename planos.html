@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Planos.css">
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <script>
+
+        // Plano 1
+        function PlanoUm(){
+            document.getElementById("subTelaum").style.display = "block";
+        }
+
+      
+
+        function fecharSubTelaum() {
+        document.getElementById("subTelaum").style.display = "none";
+    }
+
+   
+
+function assinar(){
+    document.getElementById("compra1").style.display = "block";
+}
+
+
+
+function fecharSubTela() {
+        document.getElementById("compra1").style.display = "none";
+        document.getElementById("subTelaum").style.display = "none";
+    }
+
+  
+    // Função para verificar a resposta
+    function verificarResposta() {
+        event.preventDefault();
+        var tel = document.getElementById('tel');
+        var abc = (tel).value;
+
+        var tela = document.getElementById('tela');
+        var def = (tela).value;
+
+
+        
+
+        if (abc == "") {
+                        window.alert("Complete os dados necessários!");
+                    } if (def == "") {
+                        window.alert("Complete os dados necessários!");
+                    } if (abc != "" && def != "" && ghi != "") {
+                        window.alert("Dados BaNcArIoOoOsSsS!!!");
+                    }
+    }
+
+    //Plano 2
+
+    
+    function PlanoDois(){
+            document.getElementById("subTeladois").style.display = "block";
+        }
+
+      
+
+        function fecharSubTelaDois() {
+        document.getElementById("subTeladois").style.display = "none";
+    }
+
+   
+
+function assinardois(){
+    document.getElementById("compra2").style.display = "block";
+}
+
+
+
+function fecharSubTelaDois() {
+        document.getElementById("compra2").style.display = "none";
+        document.getElementById("subTeladois").style.display = "none";
+    }
+
+
+    function verificarRespostaDois() {
+        event.preventDefault();
+        var tel = document.getElementById('tel');
+        var abc = (tel).value;
+
+        var tela = document.getElementById('tela');
+        var def = (tela).value;
+
+        var telaa = document.getElementById('telaa');
+        var ghi = (telaa).value;
+
+        
+
+        if (abc == "" && def == "" && ghi == "") {
+                        window.alert("Complete os dados necessários!");
+                    }  if (ghi == "") {
+                        window.alert("Complete os dados necessários!");
+                    }  if (abc != "" ) {
+
+                        return fecharSubTelaDois;
+                        
+                    }
+    }
+
+
+    // Plano 3
+
+    function PlanoTres(){
+            document.getElementById("subTelatres").style.display = "block";
+        }
+
+      
+
+        function fecharSubTelaTres() {
+        document.getElementById("subTelatres").style.display = "none";
+    }
+
+    
+function assinartres(){
+    document.getElementById("compra3").style.display = "block";
+}
+
+
+
+function fecharSubTelaTres() {
+        document.getElementById("compra3").style.display = "none";
+        document.getElementById("subTelatres").style.display = "none";
+    }
+   
+    function OpenPopUp() {
+            window.open('usuariolog.html', 'popup', 'width=459,height=570');
+        }
+
+
+        function voltar() {
+            event.preventDefault();
+            window.location.href = "index.html";
+        }
+   </script>
+
+<style>
+/*Tudo*/
+
+main {
+    height: 800px;
+}
+
+/*Fim tudo*/
+
+/*Header*/
+
+#foto2 {
+    margin-left: 10%;
+}
+
+.foto {
+    padding: 0px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.topico {
+    padding: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+
+#foto2 {
+    margin-left: 28%;
+}
+
+#foto2:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+#botlogo {
+    margin-right: 15%;
+}
+
+.topico {
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.logincerto {
+    align-content: center;
+}
+
+.botoes {
+    background-color: #93d0ff83;
+    border-radius: 40px;
+    border-color: #ffffff;
+    height: 50px;
+    width: 120px;
+    font-family: Mate SC;
+    font-size: larger;
+    margin-bottom: 10%;
+    margin-left: 5px;
+}
+
+.botoes:hover {
+    background-color: #93D1FF;
+    box-shadow: 5px 2px #4b93ca;
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.botao {
+    width: 600px;
+    justify-content: space-between;
+    padding: 15px;
+    padding-left: 15px;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1;
+    width: 100%;
+    height: 10%;
+}
+
+/*Fim header*/
+
+/*Corpo*/
+main {
+    margin-top: 100px;
+    background-color: #93D1FF;
+    height: 140px;
+
+}
+
+#planos{
+    color: #ffffff;
+   margin-left: 570px;
+   font-size: 100px;
+   margin-top: 100px;
+}
+ 
+#plan1{
+    margin-top: 80px;
+
+}
+#plan1:hover{
+    transform: scale(0.9);
+    transition: all 1.0s;
+}
+
+
+ 
+#plan2{
+    margin-top: 80px;
+    margin-left: 10px;
+    width: 720px;
+}
+#plan2:hover{
+    transform: scale(0.9);
+    transition: all 1.0s;
+}
+
+#plan3{
+    margin-top: 80px;
+    margin-left: -20px;
+    width: 720px;
+    
+}
+#plan3:hover{
+    transform: scale(0.9);
+    transition: all 1.0s;
+}
+.titu1{
+    color: #93D1FF;
+    font-size: 90px;
+    margin-left: 800px;
+    margin-top: -460px;
+    font-weight: 700;
+}
+
+.text1{
+    color: #93D1FF;
+    font-size: 50px;
+    margin-left: 800px;
+    margin-top: -80px;
+}
+
+.titu2{
+    color: #21638C;
+    font-size: 90px;
+    margin-left: 800px;
+    margin-top: -460px;
+    font-weight: 700;
+}
+
+.text2{
+    color: #0D2E46;
+    font-size: 50px;
+    margin-left: 800px;
+    margin-top: -80px;
+}
+
+
+.titu3{
+    color: #0D2E46;
+    font-size: 90px;
+    margin-left: 800px;
+    margin-top: -460px;
+    font-weight: 700;
+}
+
+.text3{
+    color: #0D2E46;
+    font-size: 50px;
+    margin-left: 800px;
+    margin-top: -80px;
+}
+
+    .textt1{
+        font-size: 20px;
+        margin-left: 805px;
+        margin-top: -50px;
+    }
+
+    .buttone{
+        background-color: #93D1FF;
+        border-radius: 15px;
+        margin-left: 900px;
+        margin-top: px;
+        height: 50px;
+        width: 200px;
+        border: 1px solid #93D1FF;
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    
+    .buttonedois{
+        background-color: #21638C;
+        border-radius: 15px;
+        margin-left: 900px;
+        margin-top: px;
+        height: 50px;
+        width: 200px;
+        border: 1px solid #21638C;
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    .buttonetres{
+        background-color: #0D2E46;
+        border-radius: 15px;
+        margin-left: 900px;
+        margin-top: px;
+        height: 50px;
+        width: 200px;
+        border: 1px solid #21638C;
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+
+    .buttone:hover{
+        transform: scale(1.1);
+        transition: all 0.7s;
+        background-color: #93D1FF;
+        box-shadow: 5px 5px #4b93ca;
+    }
+
+    
+    .buttonedois:hover{
+        transform: scale(1.1);
+        transition: all 0.7s;
+        background-color: #21638C;
+        box-shadow: 5px 5px #0D2E46;
+    }
+
+    .buttonetres:hover{
+        transform: scale(1.1);
+        transition: all 0.7s;
+        background-color: #0D2E46;
+        box-shadow: 5px 5px #93D1FF;
+    }
+/*Fim corpo*/
+/*Subtela*/
+
+.sub-tela {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff(0, 0, 0, 0.5);
+    /* Fundo semi-transparente */
+    z-index: 9999;
+    /* Nível de sobreposição para aparecer acima do conteúdo principal */
+    display: none;
+    /* Inicialmente oculta */
+}
+
+.sub-tela-conteudo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    width: 600px;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #ffffff(0, 0, 0, 0.3);
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.sub-tela-titulo {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sub-tela-pergunta {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sub-tela-opcoes {
+    display: flex;
+    justify-content: center;
+    background-color: #a09d9d;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.sub-tela-opcoes label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.sub-tela-botoes {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#tel {
+    background-color: #eceeef;
+    border: 1px solid #a8a8a9;
+    width: 380px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#cpf{
+    background-color: #eceeef;
+    border: 1px solid #a8a8a9;
+    width: 380px;
+    height: 29px;
+    border-radius: 5px;
+}
+
+#tela {
+    background-color: #eceeef;
+    border: 1px solid #a8a8a9;
+    width: 200px;
+    color: #8d8d8d;
+    border-radius: 5px;
+}
+
+
+#telaa {
+    background-color: #eceeef;
+    border: 1px solid #a8a8a9;
+    width: 200px;
+    color: #8d8d8d;
+    border-radius: 5px;
+}
+#tell {
+    background-color: #eceeef;
+    border: 1px solid #a8a8a9;
+    width: 200px;
+    color: #8d8d8d;
+    border-radius: 5px;
+}
+
+.buttones {
+    padding: 15px 25px;
+    background-color: #fdfdfd;
+    color: #0a0a0a;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 130px;
+}
+
+.buttones:hover {
+    background-color: #93D1FF;
+}
+
+.texto1{
+    font-size: 25px;
+  
+}
+
+.assinar{
+    background-color: #93D1FF;
+    border-radius: 15px;
+
+    height: 50px;
+    width: 200px;
+    border: 1px solid #93D1FF;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.assinar:hover{
+    transform: scale(1.1);
+    transition: all 0.7s;
+    background-color: #93D1FF;
+    box-shadow: 5px 5px #4b93ca;
+}
+
+
+/*Fim subtela*/
+</style>
+<!--Plano 1 Subtela-->
+ <div id="subTelaum" class="sub-tela">
+    <div class="sub-tela-conteudo">
+        <div style="color: #93D1FF;">
+       <h1>PLANO MED+ VIDA</h1>
+        </div>
+        <div>
+        <p class="texto1"> Versão mensal à partir de R$120,00</p>
+        <button onclick="assinar()" class="assinar">Assinar</button>
+</div>
+<div>
+    <p class="texto1"> Versão anual à partir de R$1.440,00</p>
+    <button onclick="assinar()" class="assinar">Assinar</button>
+</div>
+<br>
+        
+        <button onclick="fecharSubTelaum()" class="buttones">Fechar</button>
+    </div>
+</div>
+
+<!--Compra 1-->
+
+<div id="compra1" class="sub-tela">
+    <div class="sub-tela-conteudo">
+        <div style="color: #000000;">
+            <h2>Preencha as informações necessárias para a solicitação do plano.</h2>
+        </div>
+        <br>
+        <div style="align-items: flex-start;">
+            <label></label>
+            <input  id="tel" name="tel" value="" required="required" placeholder="Digite seu nome">
+            <br>
+
+            <br>
+            <label></label>
+            <input    id="tel" name="tel" value="" required="required" placeholder="Digite seu CPF">
+            <br>
+
+
+            <br>
+            <label></label>
+            <input type="email"  id="tel" name="tel" required="required" value="" placeholder="Digite seu e-mail">
+            <br>
+
+            
+            <br>
+            <label> </label>
+            <input   id="tel" name="tel" value="" required="required" placeholder="Telefone com DDD">
+            <br>
+
+        
+            <br>
+            <label>Estado</label>
+            <select id="tela" name="tel" value="" required="required" >
+            
+                <option id="ac">Acre</option>
+                <option id="al">Alagoas</option>
+                <option id="ap">Amapá</option>
+                <option id="am">Amazonas</option>
+                <option id="ba">Bahia</option>
+                <option id="ce">Ceará</option>
+                <option id="es">Espírito Santo</option>
+                  <option id="go">Goiás</option>
+                <option id="ma">Maranhão</option>
+                <option id="mt">Mato Grosso</option>
+                <option id="ms">Mato Grosso do Sul</option>
+                <option id="mg">Minas Gerais</option>
+                <option id="pa">Pará</option>
+                <option id="pb">Paraíba</option>
+                  <option id="pr">Paraná</option>
+                <option id="pe">Pernambuco</option>
+                <option id="pi">Piauí</option>
+                <option id="rj">Rio de Janeiro</option>
+                <option id="rn">Rio Grande do Norte</option>
+                <option id="rs">Rio Grande do Sul</option>
+                <option id="ro">Rondônia</option>
+                  <option id="rr">Roraima</option>
+                <option id="sc">Santa Catarina</option>
+                <option id="sp">São Paulo</option>
+                <option id="se">Sergipe</option>
+                <option id="to">Tocantins</option>
+                <option id="df">Distrito Federal</option>
+            
+            </select>
+
+            <br>
+            
+    
+            <br>
+            <label>Selecione a faixa etária</label>
+            <select id="tela" name="tel" value="" required="required" >
+              
+                <option>0 a 18 anos</option>
+                <option>19 a 23 anos</option>
+                <option>24 a 28 anos</option>
+                <option>29 a 33 anos</option>
+                <option>34 a 28 anos</option>
+                <option>39 a 43 anos</option>
+                <option>44 a 48 anos</option>
+                <option>49 a 53 anos</option>
+                <option>54 a 58 anos</option>
+                <option>59 +</option>
+
+            </select>
+
+        
+        </div>
+        <br>
+   
+        <br>
+        <br>
+
+        <button onclick="verificarResposta()" class="buttones">Confirmar</button>
+        <button onclick="fecharSubTela()" class="buttones">Fechar</button>
+    </div>
+</div>
+
+<!--Fim Plano 1 Subtela-->
+
+   <!--Plano 2 Subtela-->
+
+   <div id="subTeladois" class="sub-tela">
+    <div class="sub-tela-conteudo">
+        <div style="color: #93D1FF;">
+       <h1>PLANO MED+ FAMÍLIA</h1>
+        </div>
+        <div>
+        <p class="texto1"> Versão mensal à partir de R$210,00</p>
+        <button onclick="assinardois()" class="assinar">Assinar</button>
+</div>
+<div>
+    <p class="texto1"> Versão anual à partir de R$2.520,00</p>
+    <button onclick="assinardois()" class="assinar">Assinar</button>
+</div>
+<br>
+        
+        <button onclick="fecharSubTelaDois()" class="buttones">Fechar</button>
+    </div>
+</div>
+
+
+<!--Compra 2-->
+
+
+<div id="compra2" class="sub-tela">
+    <div class="sub-tela-conteudo">
+        <div style="color: #000000;">
+            <h2>Preencha as informações necessárias para a solicitação do plano.</h2>
+        </div>
+        <br>
+        <div style="align-items: flex-start;">
+            <label></label>
+            <input   id="tel" name="tel" value="" required="required" placeholder="Digite seu nome">
+            <br>
+
+            <br>
+            <label></label>
+            <input    id="tel" name="tel" value="" required="required" placeholder="Digite seu CPF">
+            <br>
+
+
+            <br>
+            <label></label>
+            <input type="email"  id="tel" name="tel" required="required" value="" placeholder="Digite seu e-mail">
+            <br>
+
+            
+            <br>
+            <label> </label>
+            <input   id="tel" name="tel" value="" required="required" placeholder="Telefone com DDD">
+            <br>
+
+        
+            <br>
+            <label>Estado</label>
+            <select id="tela" name="tel" value="" required="required" >
+            
+                <option id="ac">Acre</option>
+                <option id="al">Alagoas</option>
+                <option id="ap">Amapá</option>
+                <option id="am">Amazonas</option>
+                <option id="ba">Bahia</option>
+                <option id="ce">Ceará</option>
+                <option id="es">Espírito Santo</option>
+                  <option id="go">Goiás</option>
+                <option id="ma">Maranhão</option>
+                <option id="mt">Mato Grosso</option>
+                <option id="ms">Mato Grosso do Sul</option>
+                <option id="mg">Minas Gerais</option>
+                <option id="pa">Pará</option>
+                <option id="pb">Paraíba</option>
+                  <option id="pr">Paraná</option>
+                <option id="pe">Pernambuco</option>
+                <option id="pi">Piauí</option>
+                <option id="rj">Rio de Janeiro</option>
+                <option id="rn">Rio Grande do Norte</option>
+                <option id="rs">Rio Grande do Sul</option>
+                <option id="ro">Rondônia</option>
+                  <option id="rr">Roraima</option>
+                <option id="sc">Santa Catarina</option>
+                <option id="sp">São Paulo</option>
+                <option id="se">Sergipe</option>
+                <option id="to">Tocantins</option>
+                <option id="df">Distrito Federal</option>
+            
+            </select>
+
+            <br>
+            <br>
+            <label>Número de vidas</label>
+            <input  type="number" id="telaa" name="tel" value="" placeholder="Ex: 2">
+            <br>
+
+    
+            <br>
+            <label>Selecione a faixa etária</label>
+            <select id="tela" name="tel" value=""  >
+              
+                <option>0 a 18 anos</option>
+                <option>19 a 23 anos</option>
+                <option>24 a 28 anos</option>
+                <option>29 a 33 anos</option>
+                <option>34 a 28 anos</option>
+                <option>39 a 43 anos</option>
+                <option>44 a 48 anos</option>
+                <option>49 a 53 anos</option>
+                <option>54 a 58 anos</option>
+                <option>59 +</option>
+                <option>Outro</option>
+
+            </select>
+
+            <label></label>
+            <input  id="tell" name="tel" value="" placeholder="Outro">
+            <br>
+        </div>
+        <br>
+   
+        <br>
+        <br>
+
+        <button onclick="verificarRespostaDois()" class="buttones">Confirmar</button>
+        <button onclick="fecharSubTelaDois()" class="buttones">Fechar</button>
+    </div>
+</div>
+
+
+<!--Fim Plano 2 Subtela-->
+
+<!--PLano 3 subtela-->
+
+<div id="subTelatres" class="sub-tela">
+    <div class="sub-tela-conteudo">
+        <div style="color: #93D1FF;">
+       <h1>PLANO MED+ UNIÃO</h1>
+        </div>
+        <div>
+        <p class="texto1"> Versão mensal à partir de R$1.200,00 (a cada 10 funcionários)</p>
+        <button onclick="assinartres()" class="assinar">Assinar</button>
+</div>
+<div>
+    <p class="texto1"> Versão anual à partir de R$20.400,00 (a cada 10 funcionários)</p>
+    <button onclick="assinartres()" class="assinar">Assinar</button>
+</div>
+<br>
+        
+        <button onclick="fecharSubTelaTres()" class="buttones">Fechar</button>
+    </div>
+</div>
+
+<div id="compra3" class="sub-tela">
+    <div class="sub-tela-conteudo">
+        <div style="color: #000000;">
+            <h2>Preencha as informações necessárias para a solicitação do plano.</h2>
+        </div>
+        <br>
+        <div style="align-items: flex-start;">
+            <label></label>
+            <input   id="tel" name="tel" value="" required="required" placeholder="Digite seu CNPJ">
+            <br>
+
+            <br>
+            <label></label>
+            <input    id="tel" name="tel" value="" required="required" placeholder="Digite o nome da empresa">
+            <br>
+<br>
+            <label></label>
+            <input   id="tel" name="tel" value="" required="required" placeholder="Digite seu nome">
+            <br>
+
+            <br>
+            <label></label>
+            <input type="email"  id="tel" name="tel" required="required" value="" placeholder="Digite seu e-mail">
+            <br>
+
+            
+            <br>
+            <label> </label>
+            <input   id="tel" name="tel" value="" required="required" placeholder="Telefone com DDD">
+            <br>
+
+        
+            <br>
+            <label>Estado</label>
+            <select id="tela" name="tel" value="" required="required" >
+            
+                <option id="ac">Acre</option>
+                <option id="al">Alagoas</option>
+                <option id="ap">Amapá</option>
+                <option id="am">Amazonas</option>
+                <option id="ba">Bahia</option>
+                <option id="ce">Ceará</option>
+                <option id="es">Espírito Santo</option>
+                  <option id="go">Goiás</option>
+                <option id="ma">Maranhão</option>
+                <option id="mt">Mato Grosso</option>
+                <option id="ms">Mato Grosso do Sul</option>
+                <option id="mg">Minas Gerais</option>
+                <option id="pa">Pará</option>
+                <option id="pb">Paraíba</option>
+                  <option id="pr">Paraná</option>
+                <option id="pe">Pernambuco</option>
+                <option id="pi">Piauí</option>
+                <option id="rj">Rio de Janeiro</option>
+                <option id="rn">Rio Grande do Norte</option>
+                <option id="rs">Rio Grande do Sul</option>
+                <option id="ro">Rondônia</option>
+                  <option id="rr">Roraima</option>
+                <option id="sc">Santa Catarina</option>
+                <option id="sp">São Paulo</option>
+                <option id="se">Sergipe</option>
+                <option id="to">Tocantins</option>
+                <option id="df">Distrito Federal</option>
+            
+            </select>
+
+            <br>
+            <br>
+            <label>Número de vidas</label>
+            <input  type="number" id="telaa" name="tel" value="" placeholder="Ex: 2">
+            <br>
+
+      
+            <br>
+            <label>
+                <input type="radio" name="resposta" value="sim">Coparticipação</label>
+            <label>
+                <input type="radio" name="resposta" value="nao">Sem Coparticipação</label>
+            <br>
+            <br>
+
+        </div>
+        <br>
+   
+        <br>
+        <br>
+
+        <button onclick="verificarRespostaDois()" class="buttones">Confirmar</button>
+        <button onclick="fecharSubTelaTres()" class="buttones">Fechar</button>
+    </div>
+</div>
+
+
+
+    <!--Header-->
+    <header>
+
+        <div class="topico">
+            <img src="images/logoespee.png" height="40%" width="300px" button id="botlogo" onclick="voltar()">
+            <a href="index.html"><button class="botoes">Home</button></a>
+            <a href="exame.html"><button class="botoes">Exames</button></a>
+            <a href="consultaspac.html"><button class="botoes">Consultas</button></a>
+            <a href="cirurgias.html"><button class="botoes">Cirurgias</button></a>
+            <a href="sobrenos.html"><button class="botoes">Sobre nós</button></a>
+            <img src="images/iconelogin.png" height="80px" width="80px" id="foto2" button id="botlogi"
+                onclick="OpenPopUp()">
+        </div>
+    </header>
+
+    <!--Fim header-->
+
+    <!--Corpo-->
+    <main>
+        
+      <div class="meio">
+        <p id="planos">PLANOS MED+</p>
+      </div>
+    
+    <div class="pla1">
+        <img src="images/plano1.png" id="plan1">
+        <p class="titu1">MED+ VIDA</p>
+     <P class="text1">Plano individual</P>
+   
+    <button onclick="PlanoUm()" class="buttone">Assinar Plano</button>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="pla1">
+        <img src="images/plano2.png" id="plan2">
+        <p class="titu2">MED+ FAMÍLIA</p>
+     <P class="text2">Plano familiar</P>
+   
+    <button onclick="PlanoDois()" class="buttonedois">Assinar Plano</button>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="pla1">
+        <img src="images/plano3.png" id="plan3">
+        <p class="titu3">MED+ UNIÃO</p>
+     <P class="text3">Plano empresarial</P>
+   
+    <button onclick="PlanoTres()" class="buttonetres">Assinar Plano</button>
+
+    </main>
+    
+
+
+
+    <!--Fim corpo-->
+
+</body>
+
+</html>
