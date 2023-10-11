@@ -14,8 +14,8 @@ const app = express();
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'phpmyadmin',
-  password: 'isabila',
-  database: 'medical',
+  password: '123456',
+  database: 'mydb',
 });
 
 // Configurar o middleware bodyParser
