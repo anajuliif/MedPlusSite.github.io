@@ -95,15 +95,15 @@ app.get('/login', (req, res) => {
 });
 
 app.post('/login', passport.authenticate('local', {
-  successRedirect: '/dashboard', // Redirecionamento após login bem-sucedido
+  successRedirect: '/fechar.html', // Redirecionamento após login bem-sucedido
   failureRedirect: '/login',    // Redirecionamento após falha de login
   failureFlash: true,          // Permite o uso de mensagens flash
 }));
 
 // Rota protegida - exemplo da página de dashboard
-app.get('/dashboard', (req, res) => {
+app.get('/fechar.html', (req, res) => {
   if (req.isAuthenticated()) {
-    res.send('Você está logado.');
+    //res.send('Você está logado.');
     console.log('Usuário logado');
     //res.redirect('/');
   } else {
