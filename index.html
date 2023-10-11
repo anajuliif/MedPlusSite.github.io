@@ -26,7 +26,7 @@
 <a href="/Consultas2.html"><button class="botoes">Consultas</button></a>
 <a href="/cirurgia.html"><button class="botoes">Cirurgias</button></a>
 <a href="/planos.html"><button class="botoes">Planos</button></a>
-<img src="images/iconelogin.png" height="80px" width="80px" id="foto2" button id="botlogi" onclick="OpenPopUp()">
+<img src="images/iconelogin.png" height="80px" width="80px" id="foto2" button id="botlogi" onclick="subtela()">
 </div>
 </header>
 <br>
@@ -69,8 +69,8 @@ function nextImage(){
     document.getElementById("radio"+count).checked = true;
 } 
 
-function OpenPopUp(){
-    window.open('opcoeslog.html', 'popup','width=459,height=570');
+function subtela() {
+  document.getElementById("subTela").style.display = "block";
 }
 
 
@@ -815,6 +815,7 @@ height: 400px;
             </footer>
                  
       
+            
 </body>
 
 </html>
