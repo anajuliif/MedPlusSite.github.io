@@ -85,12 +85,22 @@
      
       background-color: #a5a4a44b;
       
-      
+    }
+
+    #vc{
+        font-family: Mate SC;
+        margin-left: 80px;
     }
 </style>
-  
+<script>
+function fechar() {
+    window.close;
+}
+
+</script>
   <body>
   
+    
 
     <div class="box">
      <form method="POST" action="/login">
@@ -99,26 +109,16 @@
       <br>
 
 
-        <div>
-            <label for="username">Usuário:</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div>
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div>
-            <button type="submit" id="done">Entrar</button>
+      <h1 id="vc">Você está logado!</h1>
+
+      <br>
+      <br>
+    
+            <button type="submit" onclick="fechar()"  id="done">Fechar</button>
         </div>
         
        
-          
-          <div class="crie">
-            <a href="/esquecisenha.html" id="crie2">Esqueci minha senha</a>
-          </div>
-          <div class="crie">
-            <a href="/formulario.html" id="crie">Crie uma conta</a>
-          </div>
+
         </fieldset>
     </form>
   
