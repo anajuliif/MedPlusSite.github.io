@@ -1,3 +1,7 @@
+
+//////////////////////////////////Login
+
+
 const express = require('express');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
@@ -89,6 +93,11 @@ passport.deserializeUser(async (id, done) => {
 // Configurar EJS como o motor de visualização
 app.set('view engine', 'ejs');
 
+// Rota para a página index
+app.get('/', (req, res) => {
+  res.render('index'); // Use o mecanismo de visualização que preferir
+});
+
 // Rota para a página de login
 app.get('/login', (req, res) => {
   res.render('login'); // Use o mecanismo de visualização que preferir
@@ -100,17 +109,20 @@ app.post('/login', passport.authenticate('local', {
   failureFlash: true,          // Permite o uso de mensagens flash
 }));
 
+ 
+ 
 // Rota protegida - exemplo da página de dashboard
-app.get('/fechar.html', (req, res) => {
-  if (req.isAuthenticated()) {
-    //res.send('Você está logado.');
-    console.log('Usuário logado');
-    //res.redirect('/');
-  } else {
-    console.log('Usuário inválido');
-    res.redirect('/login');
-  }
-});
+//app.get('/fechar.html', (req, res) => {
+ // if (req.isAuthenticated()) {
+  //  res.send('Você está logado.');
+   // console.log('Usuário logado');
+  
+    //res.redirect('window.close;');
+ // } else {
+   // console.log('Usuário inválido');
+   // res.redirect('/login');
+ // }
+//});
 
 // Servir arquivos estáticos
 app.use(express.static(__dirname + '/'));
@@ -119,4 +131,6 @@ app.use(express.static(__dirname + '/'));
 app.listen(port, () => {
   console.log(`Servidor Express está rodando na porta ${port}`);
 });
+
+
 

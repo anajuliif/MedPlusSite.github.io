@@ -26,7 +26,7 @@
 <a href="/Consultas2.html"><button class="botoes">Consultas</button></a>
 <a href="/cirurgia.html"><button class="botoes">Cirurgias</button></a>
 <a href="/planos.html"><button class="botoes">Planos</button></a>
-<img src="images/iconelogin.png" height="80px" width="80px" id="foto2" button id="botlogi" onclick="abrirSubTela()">
+<img src="images/iconelogin.png" height="80px" width="80px" id="foto2" button id="botlogi" onclick="login()">
 </div>
 </header>
 <br>
@@ -45,8 +45,11 @@ function voltar(){event.preventDefault();
 
   }
 
+const divResultado = document.getElementById("divResultado");
+const divEscolha = document.getElementById("divEscolha");
+
   function login(){event.preventDefault();
-    window.location.href="/login.html";
+    window.location.href="/login";
 
   }
 
@@ -69,16 +72,8 @@ function nextImage(){
     document.getElementById("radio"+count).checked = true;
 } 
 
-    function abrirSubTela() {
-        document.getElementById("subTela").style.display = "block";
-    }
-    
-    function logmedico(){
-document.getElementById("subTelaLoginMe").style.display = "block";
-}
-function logpaciente(){
-   document.getElementById("subTelaLoginPa").style.display = "block";
-}
+ 
+ 
 
 </script>
 
@@ -828,35 +823,8 @@ height: 400px;
 
     <!-- Corpo -->
     <main>
-         <!-- Sub-tela -->
-    <div id="subTela" class="sub-tela">
-        <div class="sub-tela-conteudo">
-
-               <div class="box">
-      <form action="">
-        <fieldset class="barraemvolta">
-          <img src="images/logo_removebg_preview_1.png" alt="" id="logo">
-          <br>
-          <br>
-  
-          
-          <div class="opcoe">
-          <p id="text">Selecione seu tipo de conta</p>
-          <input type="radio" id="medico" name="conta" value="medico" onclick="logmedico()" required>
-          <label id="medit" for="medico">Médico</label>
-          
-          <input type="radio" id="paciente" name="conta" value="paciente" onclick="logpaciente()" required>
-          <label id="pacit" for="paciente">Paciente</label>
-        </div>
-        </div>
-        </div>
-        </div>
 
 
-      
-        </fieldset>
-      </form>
-    
     
     
     
