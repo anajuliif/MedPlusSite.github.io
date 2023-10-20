@@ -104,7 +104,7 @@ app.get('/login', (req, res) => {
 });
 
 app.post('/login', passport.authenticate('local', {
-  successRedirect: '/fechar.html', // Redirecionamento após login bem-sucedido
+  successRedirect: '/fechar', // Redirecionamento após login bem-sucedido
   failureRedirect: '/login',    // Redirecionamento após falha de login
   failureFlash: true,          // Permite o uso de mensagens flash
 }));

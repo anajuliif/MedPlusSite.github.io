@@ -2,8 +2,9 @@
 
 <!DOCTYPE html>
 <html lang="ptbr">
-
+  <title>Paciente - Med+</title>
 <head>
+
  
         <style>
             body {
@@ -12,7 +13,6 @@
                 background-color: #f8f9fa;
                 margin: 0px auto;
                 padding: 0px auto;
-                border: 1px solid green;
                 border-radius: 5vw;
                 font-size: 24px;
                 /* height: 100vh; */
@@ -23,7 +23,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 50px;
+                margin-left: 0px;
+                margin-top: 10px;
             }
 
             .login-card:hover {
@@ -32,7 +33,7 @@
             }
 
             .login-card {
-                border: 2px solid #f4cd1f;
+               border: 1px solid #a8a8a9;
                 /* Cor ciano */
                 border-radius: 10px;
                 padding: 20px;
@@ -42,7 +43,7 @@
 
             .login-fields {
                 justify-content: center;
-                margin: 30px;
+                margin-left: 30px;
                 font-size: 24px;
             }
 
@@ -52,13 +53,36 @@
             }
 
             input {
-                font-size: 32px;
+                font-size: 28px;
+                border-radius: 10px;
+                border: 1px solid #a8a8a9;
             }
 
-            button {
-                font-size: 32px;
+            #entrar {
+                font-size: 22px;
                 font-family: 'Courier New', Courier, monospace;
+                background-color: #93D1FF;
+                border-radius: 40px;
+                border-color: #ffffff;
+                height: 50px;
+                width: 160px;
+                font-family: Mate SC;
+                margin-left: 190px;
             }
+            
+             #entrar:hover {
+                background-color: #93D1FF;
+                box-shadow: 5px 2px #4b93ca;
+                transform: scale(1.1);
+                transition: all 0.5s;
+            }
+  
+            #logo {
+              width: 450px;
+              height: 180px;
+              margin-left: 90px;
+           }
+
         </style>
 </head>
 
@@ -71,17 +95,19 @@
     <main>
         <div class="login-container">
             <div class="login-card">
-                <h3 style="text-align: center;">Login</h3>
+               <img src="images/logo_removebg_preview_1.png" alt="" id="logo">
                 <form action="/login" method="post">
                     <div class="login-fields">
                         <div><label for="username" style="width: 30vw;">Usuário:</label></div>
                         <div><input type="text" id="username" name="username" required style="width: 30vw;"></div>
                     </div>
+                    <br>
                     <div class="login-fields">
                         <div><label for="password">Senha:</label></div>
                         <div> <input type="password" id="password" name="password" required style="width: 30vw;"></div>
                     </div>
-                    <div class="login-fields"><button type="submit">Login</button></div>
+                    <br>
+                    <div class="login-fields"><button type="submit" id="entrar">Entrar</button></div>
                 </form>
             </div>
         </div>
