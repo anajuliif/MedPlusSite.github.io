@@ -11,7 +11,7 @@ const mysql = require('mysql2');
 const bcrypt = require('bcrypt');
 const flash = require('connect-flash');
 const port = 3000;
-
+const register = require('./register.js');
 const app = express();
 
 // Configurar a conexão com o banco de dados MySQL
@@ -64,6 +64,19 @@ passport.use(new LocalStrategy(
   }
 ));
 
+app.post('/register', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const userId = await register.registerUser(username,password);
+    // Usuário cadastrado com sucesso
+    res.status(200).send(`Usuário cadastrado com sucesso. ID: ${userId}`);
+  } catch (error) {
+    // Lidar com erros de cadastro
+    res.status(400).send(`Erro no cadastro: ${error.message}`);
+  }
+});
+
 //Serializar
 passport.serializeUser((user, done) => {
   console.log('Serializando usuário:', user.id);
@@ -104,13 +117,15 @@ app.get('/login', (req, res) => {
 });
 
 app.post('/login', passport.authenticate('local', {
-  successRedirect: '/fechar', // Redirecionamento após login bem-sucedido
+  successRedirect: '/fechar.html', // Redirecionamento após login bem-sucedido
   failureRedirect: '/login',    // Redirecionamento após falha de login
   failureFlash: true,          // Permite o uso de mensagens flash
 }));
 
- 
- 
+app.get('/formulario', (req, res) => {
+  res.render('formulario'); // Use o mecanismo de visualização que preferir
+});
+
 // Rota protegida - exemplo da página de dashboard
 //app.get('/fechar.html', (req, res) => {
  // if (req.isAuthenticated()) {
