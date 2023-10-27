@@ -16,11 +16,11 @@
       <img src="images/logoespee.png" height="40%" width="300px" button="" id="botlogo" onclick="voltar()">
 
 
-      <a href="https://isabila2.github.io/ClinicaMedPlus.github.io/"><button class="botoes">Home</button></a>
-      <a href="https://isabila2.github.io/ClinicaMedPlus.github.io/"><button class="botoes">Exames</button></a>
-      <a href="https://isabila2.github.io/ClinicaMedPlus.github.io/Consultas2.html"><button class="botoes">Consultas</button></a>
-      <a href="https://isabila2.github.io/ClinicaMedPlus.github.io/cirurgia.html"><button class="botoes">Cirurgias</button></a>
-      <a href="#planos"><button class="botoes">Planos</button></a>
+      <a href="/"><button class="botoes">Home</button></a>
+      <a href="/exames.html"><button class="botoes">Exames</button></a>
+      <a href="/Consultas2.html"><button class="botoes">Consultas</button></a>
+      <a href="/cirurgia.html"><button class="botoes">Cirurgias</button></a>
+      <a href="/planos.html"><button class="botoes">Planos</button></a>
       <img src="images/Login.png" height="80px" width="80px" id="foto2" button="" onclick="login()">
       </div>
       </header>
@@ -644,6 +644,12 @@ button {
           return []; // Retorna um array vazio se o paciente não for encontrado
         }
       }
+
+
+  function login(){event.preventDefault();
+    window.location.href="/login";
+
+  }
     </script>
 </body>
 

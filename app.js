@@ -1,3 +1,7 @@
+
+//////////////////////////////////Login
+
+
 const express = require('express');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
@@ -7,7 +11,7 @@ const mysql = require('mysql2');
 const bcrypt = require('bcrypt');
 const flash = require('connect-flash');
 const port = 3000;
-
+const register = require('./register.js');
 const app = express();
 
 // Configurar a conexão com o banco de dados MySQL
@@ -60,6 +64,49 @@ passport.use(new LocalStrategy(
   }
 ));
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+//Marcar Consultas
+// Rota para a página de consultas
+//app.get('/consultas', (req, res) => {
+  //res.render('consultas'); // Use o mecanismo de visualização que preferir
+//});
+
+//const query = 'INSERT INTO `consultas`( `nomemedico`, `horario`, `dataconsulta`) VALUES (?,?,?)';
+//db.query(query, [ nomemedico, horario, dataconsulta]);
+
+const consulta = require('./consulta.js');
+
+// ... seu código ...
+
+// Em algum lugar do seu código onde você deseja marcar a consulta:
+consulta.marcarConsulta(nomepaciente, nomemedico, horario, dataconsulta)
+  .then((result) => {
+    // Faça algo com o resultado da consulta
+  })
+  .catch((error) => {
+    console.error("Erro ao marcar consulta:", error);
+  });
+
+
+=======
+app.post('/register', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const userId = await register.registerUser(username,password);
+    // Usuário cadastrado com sucesso
+    res.status(200).send(`Usuário cadastrado com sucesso. ID: ${userId}`);
+  } catch (error) {
+    // Lidar com erros de cadastro
+    res.status(400).send(`Erro no cadastro: ${error.message}`);
+  }
+});
+>>>>>>> c4f177e0f4a23cb135399f0a4be9bafc7bfefb01
+
+>>>>>>> Stashed changes
 //Serializar
 passport.serializeUser((user, done) => {
   console.log('Serializando usuário:', user.id);
@@ -89,6 +136,11 @@ passport.deserializeUser(async (id, done) => {
 // Configurar EJS como o motor de visualização
 app.set('view engine', 'ejs');
 
+// Rota para a página index
+app.get('/', (req, res) => {
+  res.render('index'); // Use o mecanismo de visualização que preferir
+});
+
 // Rota para a página de login
 app.get('/login', (req, res) => {
   res.render('login'); // Use o mecanismo de visualização que preferir
@@ -100,6 +152,7 @@ app.post('/login', passport.authenticate('local', {
   failureFlash: true,          // Permite o uso de mensagens flash
 }));
 
+<<<<<<< Updated upstream
 // Rota protegida - exemplo da página de dashboard
 app.get('/dashboard', (req, res) => {
   if (req.isAuthenticated()) {
@@ -110,7 +163,24 @@ app.get('/dashboard', (req, res) => {
     console.log('Usuário inválido');
     res.redirect('/login');
   }
+=======
+app.get('/formulario', (req, res) => {
+  res.render('formulario'); // Use o mecanismo de visualização que preferir
+>>>>>>> Stashed changes
 });
+
+// Rota protegida - exemplo da página de dashboard
+//app.get('/fechar.html', (req, res) => {
+ // if (req.isAuthenticated()) {
+  //  res.send('Você está logado.');
+   // console.log('Usuário logado');
+  
+    //res.redirect('window.close;');
+ // } else {
+   // console.log('Usuário inválido');
+   // res.redirect('/login');
+ // }
+//});
 
 // Servir arquivos estáticos
 app.use(express.static(__dirname + '/'));
@@ -119,4 +189,6 @@ app.use(express.static(__dirname + '/'));
 app.listen(port, () => {
   console.log(`Servidor Express está rodando na porta ${port}`);
 });
+
+
 

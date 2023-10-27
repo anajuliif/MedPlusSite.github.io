@@ -1,11 +1,16 @@
 
-
 <!DOCTYPE html>
 <html lang="ptbr">
-  <title>Paciente - Med+</title>
+  <title>Paciente Logado - Med+</title>
 <head>
 
-<<<<<<< Updated upstream
+ 
+        <style>
+        
+            body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
     .box {
        
     }
@@ -14,108 +19,12 @@
         height: 649px;
     }
 
-    #logo {
-        width: 380px;
-        height: 130px;
-        margin-left: 10px;
-    }
-
    
-    #done {
-        background-color: #93D1FF;
-        border-radius: 40px;
-        border-color: #ffffff;
-        height: 50px;
-        width: 160px;
+    #vc{
         font-family: Mate SC;
-        font-size: larger;
-        margin-left: 100px;
-        
-        
+        font-size: 35px;
+        margin-left: 25px;
     }
-       
-
-    #done:hover{
-      background-color: #93D1FF;
-      box-shadow: 5px 2px #4b93ca;
-      transform: scale(1.1);
-      transition: all 0.5s;
-      
-    }
-
-    .crie {
-        text-align: center;
-        color: #93D1FF;
-        margin-top: 50px;
-    }
-    #username{
-        background-color: #eceeef;
-        width: 390px;
-        height: 30px;
-        border-radius: 10px;
-        border: 1px solid #a8a8a9;
-    }
-
-    #password{
-        background-color: #eceeef;
-        width: 390px;
-        height: 30px;
-        border-radius: 10px;
-        border:1px solid #a8a8a9 ;
-
-    }
-
-    #voltar{
-        margin-left: -50px;
-        
-    }
-    #crie{
-      margin-left: -86px;
-      
-      
-    }
-
-    #crie2{
-      margin-left: -80px;
-     
-      background-color: #a5a4a44b;
-      
-      
-    }
-</style>
-  
-  <body>
-  
-
-    <div class="box">
-     <form method="POST" action="/login">
-        <div>
-            <label for="username">Usuário:</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div>
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div>
-            <button type="submit" id="done">Entrar</button>
-        </div>
-        
-       
-          
-          <div class="crie">
-            <a href="/esquecisenha.html" id="crie2">Esqueci minha senha</a>
-          </div>
-          <div class="crie">
-            <a href="/formulario.html" id="crie">Crie uma conta</a>
-          </div>
-        </fieldset>
-    </form>
-  
-=======
->>>>>>> Stashed changes
- 
-        <style>
             body {
                 min-width: 320px;
                 min-height: 240px;
@@ -156,8 +65,7 @@
                 font-size: 24px;
             }
 
-        
-
+          
             input {
                 font-size: 28px;
                 border-radius: 10px;
@@ -173,7 +81,7 @@
                 height: 50px;
                 width: 160px;
                 font-family: Mate SC;
-                margin-left: 190px;
+                margin-left: 68px;
             }
             
              #entrar:hover {
@@ -186,7 +94,7 @@
             #logo {
               width: 450px;
               height: 180px;
-              margin-left: 90px;
+              margin-left: 0px;
            }
 
         </style>
@@ -195,29 +103,59 @@
 <body class="container">
 
     <header>
-             <%- include('../partials/header'); %>
+            
     </header>
 
     <main>
-        <div class="login-container">
+     <script>
+
+
+  function fechar(){event.preventDefault();
+    window.location.href="/";
+
+  }
+</script>
+  <body>
+  
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+   <br>
+
+ 
+    
+
+      <div class="login-container">
             <div class="login-card">
                <img src="images/logo_removebg_preview_1.png" alt="" id="logo">
                 <form action="/login" method="post">
                     <div class="login-fields">
-                        <div><label for="username" style="width: 30vw;">Usuário:</label></div>
-                        <div><input type="text" id="username" name="username" required style="width: 30vw;"></div>
-                    </div>
+     
+
+      <h1 id="vc">Você está logado!</h1>
+
+   
                     <br>
-                    <div class="login-fields">
-                        <div><label for="password">Senha:</label></div>
-                        <div> <input type="password" id="password" name="password" required style="width: 30vw;"></div>
-                    </div>
-                    <br>
-                    <div class="login-fields"><button type="submit" id="entrar">Entrar</button></div>
+                    <div class="login-fields"><button type="submit" onclick="fechar()"  id="entrar">Fechar</button></div>
                 </form>
             </div>
         </div>
+
+       
+
+        </fieldset>
+    </form>
+  
+ 
+
+    </div>
     </main>
+    
+    
 
     <!-- O código a seguir utiliza as classes do BootStrap-->
     <!-- <div class="container">
